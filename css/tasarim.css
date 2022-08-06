@@ -1,0 +1,5116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: url('webfonts/Roboto-Medium.eot');
+    src: url('webfonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('webfonts/Roboto-Medium.woff2') format('woff2'),
+        url('webfonts/Roboto-Medium.woff') format('woff'),
+        url('webfonts/Roboto-Medium.ttf') format('truetype'),
+        url('webfonts/Roboto-Medium.svg#Roboto-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-Italic';
+    src: url('webfonts/Roboto-Italic.eot');
+    src: url('webfonts/Roboto-Italic.eot?#iefix') format('embedded-opentype'),
+        url('webfonts/Roboto-Italic.woff2') format('woff2'),
+        url('webfonts/Roboto-Italic.woff') format('woff'),
+        url('webfonts/Roboto-Italic.ttf') format('truetype'),
+        url('webfonts/Roboto-Italic.svg#Roboto-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('webfonts/Roboto-Bold.eot');
+    src: url('webfonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+        url('webfonts/Roboto-Bold.woff2') format('woff2'),
+        url('webfonts/Roboto-Bold.woff') format('woff'),
+        url('webfonts/Roboto-Bold.ttf') format('truetype'),
+        url('webfonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('webfonts/Roboto-Regular.eot');
+    src: url('webfonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+        url('webfonts/Roboto-Regular.woff2') format('woff2'),
+        url('webfonts/Roboto-Regular.woff') format('woff'),
+        url('webfonts/Roboto-Regular.ttf') format('truetype'),
+        url('webfonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*header kısımları hazır aldık burada menü kısmını ayarladım*/
+#header {
+    display: none;
+    position: sticky;
+    height: 38px;
+    width: 12%;
+    margin-top: 3%;
+    margin-left: 3%;
+    background: #009444;
+    border-radius: 11px;
+}
+#header a {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 20%;
+    padding: 9px 10px;
+    margin: auto 0 0 auto;
+
+}
+#header a:before,
+#header a:after {
+ 
+    content: "";
+    display: block;
+    background: #fff;
+    height: 2px;
+}
+#header a span {
+    background: #fff;
+    display: block;
+    height: 2px;
+    margin: 7px 0;
+}
+
+body,h1{
+    margin: 0;
+    padding: 0;
+    color: #565757;
+    background: #fff;
+  
+   
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+   
+}
+.container
+{
+    width: 1200px; /*en dıştaki classın genişliği 12000px olarak ayarlanması*/
+    margin:0 auto;
+    
+}
+.navbar{
+    padding-top: 20px;
+    margin-bottom: 18px;
+    height: 130px;
+    clear: both;
+    height: 111px;
+    
+}
+.logo{
+    
+    float: left;
+    width: 118px;
+    height: 150px;
+    
+}
+.logo a{
+    font: inherit;
+    
+
+}
+.right{
+
+    float: right;
+    width: 800px;
+    /*clear: right;
+    /*padding-top: 20px;*/
+
+    
+}
+.sosyalmedia {
+    float: right;
+    list-style: none;
+    font-family: 'Roboto-Medium';
+   
+    
+}
+
+    
+
+.sosyalmedia li{
+    float: left;
+    text-align: center;
+   
+     
+}
+.sosyalmedia a{
+    display: table-cell;
+    text-decoration: none;
+    
+}
+.sosyalmedia li i{    
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    float: left;
+    margin: 2px;
+    font-size: 12px; /*sosyal medyanın ortasındaki font ayarlanması */
+    line-height: 23px;
+    margin-right: 4px;
+    box-shadow: 2px 1px 2px 1px #c3c0c0;
+
+}
+
+
+.fa-instagram {
+   
+    background: linear-gradient(-45deg, #5a2085 0%, #cb186b 50%, #fbca32 100%);
+}
+.fa-facebook-f{
+    background: linear-gradient(135deg, #073781 0%, #0080c5 100%);
+
+}
+
+.fa-twitter{
+    background: linear-gradient(135deg, #1680b6 0%, #39a0d7 100%);
+
+}
+.fa-whatsapp{
+    background: linear-gradient(135deg, #217f12 0%, #18c30a 100%);
+
+}
+
+.menu{
+    
+    list-style: none; /* yazıların önündeki '*' ibaresini yok eder */
+    /* display: inline-block; /* yazıları yan yana yazar*/
+    font-family:'Roboto-Medium'; /*Kullandığımız yazı tipini ayarladık*/
+    clear: right;
+    float: right; /* sola dayalı işlem yapılır*/
+    padding-top: 30px; 
+    margin-left: 5%;
+    width: calc(100% - (98px + 6%));
+}
+.menu li{
+    float: left; /* bunu yazmas isek yazılarımız alt alta gelecektir sola doğru yan yana yazar*/
+     margin-right:105px; /* Yazılar arasındaki boşluğu burada ayarladım yazıların arasına boşluk koymamızı sağlar yazılan piksel kadar mesafe koyulur*/
+    
+}
+.menu li:last-child{  /* burada iletişim ile  sayfa sonu arasındaki boşluk ayarlandı.*/
+    margin-right: 0;
+}
+.menu a{
+   
+    display: table-cell;
+    color: #565757;
+    text-decoration: none; /* yazıların altındaki çizgiyi kaldırır*/
+    
+   
+}
+.menu li i {
+    font-size: 20px;
+    margin-right: 10px;
+     
+}
+    
+.menu  li a.active,
+.menu li a:hover{
+    color: #009444;
+
+   
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+   
+    margin-top: 66px; /* yukarısı ile arasındaki boşluğu yapmak için kullandık*/
+  
+   
+}
+.content-main{
+    width: 100%;
+}
+.content-images{
+    float: left;
+     
+    /*padding: 220px 710px 148px 0px;*/      
+}
+.content-images img{
+    max-width:100%;
+  height:auto;
+}
+
+
+.content-rightside{
+    
+    float: right;
+    margin-left: 3%;
+    width: calc(97% - (437px + 6%));
+    
+}
+
+.title{
+    margin-bottom: 20px
+}
+.title h1{
+     font-weight: 500;
+    font-size: 72px;
+    line-height: 93px;
+    margin-bottom: 30px;
+    color: #565656;
+    font-family: 'Roboto-Medium';
+
+    
+}
+
+.content-text p{
+    font-size: 18px;
+    font-family: 'Roboto-Italic';
+    margin-bottom: 80px;
+    line-height: 30px;
+    color: #565656;
+    text-align: justify;
+}
+
+
+.content-button .detail-button{
+    text-align: center;
+    border: #009444 solid 1px;
+    color: #009444;
+    font-weight: 500;
+    float: right;
+    
+    font-size: 14px;
+    padding: 15px 48px;
+    text-decoration: none;
+    font-family:'Roboto-Medium';
+
+}
+
+
+
+.content-button a:hover{
+    background: #009444;
+    color: white;
+
+   
+}
+
+.gallery-button{
+   
+    background-image: url(../images/galeri.png);
+    float: left;
+    margin-left: 82px; /* bununla galeri kutucuğunu içeriye doğru taşıdık*/
+    margin-top: 67px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /*background-size: cover;
+    clear: both;*/
+       
+}
+.gallery-button div{
+    font-family: 'Roboto-Bold';
+    font-size: 36px;
+    color: white;
+    margin: 83px 16px;
+    text-decoration: none;
+
+}
+.gallery-button a{
+    text-decoration: none;
+    
+    
+}
+.footer{
+    font-family: 'Roboto-Medium';
+    font-size: 12px;
+    width: 100%;
+    position: fixed;
+    box-shadow: 6px 4px 10px #b7b3b3;
+    bottom: 0%;
+    padding: 15px 0px 15px 0px;
+    background-color: #f3f3f3;
+    z-index: 1;
+   
+   
+}
+.footer .main{
+    
+    width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    color: #565757;
+    
+}
+
+.copyrigth {
+    float: left;
+}
+.owner{
+    float: right;
+}
+.owner a{
+   
+    text-decoration: none;
+    color: #565757;
+    
+}
+.position{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+   
+
+}
+.shapes{
+    
+    height: 100%;
+    width: 100%;
+    
+    /*overflow-x: hidden;*/
+   
+    position: relative;
+   
+}
+.top {
+    
+    width: 0px;
+    height: 0px;
+    border-top: 468px solid #f4f4f4;
+    border-left: 414px solid transparent;
+    border-right: 265px solid transparent;
+    margin-left: 211px;
+    position: absolute;  
+   
+}
+.lower{
+    
+   
+    width: 0px;
+    height: 0px;
+    border-left: 257px solid transparent;
+    border-right: 418px solid transparent;
+    border-bottom: 500px solid #f4f4f4;
+    margin-top: 466px;
+    margin-left: 369px;
+}
+.left{
+    position: absolute;
+    width: 625px;
+    height: 969px;
+    background: #eeeeee;
+}
+
+    
+
+.ball{
+    
+   
+    background-image: url(../images/top.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    padding: 454px 0px;
+    top: 0px;
+}
+
+/*personal burdan başlıyor*/
+.personal-main{
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    
+}
+
+.personal-navi ul{
+    float: right;
+    
+   
+   
+
+}
+.personal-navi li{
+    list-style: none;
+   
+   margin-left: 8px;
+
+   float: left;
+    font-size: 0px;
+    
+    color: #565757;
+    margin-left: 6px;
+  
+  
+}
+.personal-navi li a{
+    
+   color: #d2d2d2;
+   text-decoration: none;
+   font-size: 12px;
+   font-family: 'Roboto-Medium';
+}
+
+
+    
+.personal-navi  li a.active{
+
+    color: #565757
+}
+
+.personal-navi li a i{
+    
+
+    width: 11px;
+    line-height: 11px;
+    background-color:#fff;
+    border-radius: 50%;
+    color: #009444;
+    font-size: 11px;
+    padding-left: 3px;
+    margin: 0px 3px 0px 3px;
+}
+.personal-top-title{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: 'Roboto-Medium';
+    color: #565656;
+    top: 45px;
+}
+.personal-images {
+    width: 100%;
+    display: inline-block;
+    margin-top: 4px;
+    
+}
+
+.personel-img {
+    float: left;
+    position: absolute;
+    z-index: 1;
+    margin-top: 17px;
+
+  
+}
+.personel-img img{
+      
+    max-width: 100%;
+
+margin-left: 15px;
+
+
+}
+
+.stadium{
+    background-image: url(../images/Layer.png);
+    float: right;
+    margin-left: 239px;
+    margin-top: 69px;
+    width: 83%;
+    height: 204px;
+    z-index: 0;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.personal-content{
+    display: table;
+    width: 100%;
+    padding-top: 10px;
+
+}
+.personal-main{
+    display: block;
+}
+.personal-text{
+    width: 100%;
+    display: inline-block;
+    margin-top: 89px;
+    margin-left: 40px;
+   
+    color: #565656;
+    
+}
+.personal-title{
+    
+    font-size: 24px;
+    font-family: 'Roboto-Bold';
+    line-height: 0.5;
+    
+
+}
+.personal-title h1{
+margin-top: 10px;
+font-size: 24px;
+}
+.personal-content-text{
+   
+    
+    font-family: 'Roboto-Italic';
+    margin-bottom: 124px;
+
+    text-align: justify;
+    line-height: 1.68;
+    margin-right: 76px;
+    font-size: 18px;
+    
+
+}
+
+.teams {
+    
+    right: 20.4%;
+    margin-top: 155px;
+    position: absolute;
+    margin-right: 6px;
+}
+.teams img {
+    
+    margin-left: 37px;
+    
+filter: drop-shadow(1px 5px 6px #29441f);
+
+    
+    
+}
+
+.p-footer .footer{
+    
+    font-family: 'Roboto-Medium';
+    font-size: 12px;
+    width: 100%;
+    position: relative;
+    box-shadow: 6px 4px 10px #b7b3b3;
+    bottom: 0%;
+    padding: 18px 0px 15px 0px;
+    background-color: #f3f3f3;
+   
+    display: table; 
+   
+}
+
+
+/*galeri kısmı burda başlıyor*/
+
+.gallery-photo {
+    width: 100%;
+    background-color: white;  
+    display: table;
+    padding-top: 24px;
+    
+    
+}
+.g-gallery{
+    padding-left: 33px;
+}
+
+.g-gallery li {
+    list-style: none;
+    float: left;
+    display: block;
+    width: 23.5%;
+    height: 185px;
+    margin-left: 1.4%;
+    margin-bottom: 1.9%;
+   
+    
+}
+.g-gallery li img{
+
+    max-width: 100%;
+    background-size: cover;
+    cursor: pointer; /*bu belki silinir*/
+    object-fit: cover;
+
+}
+.g-gallery li a{
+    width: 100%;
+    
+    cursor: pointer; /*bu belki silinir*/
+    object-fit: cover;
+
+}
+
+.g-gallery li:last-child{  /* burada iletişim ile  sayfa sonu arasındaki boşluk ayarlandı.*/
+    margin-bottom: 0;
+}
+
+
+/*İletişim kısmı burada başlıyor*/
+.contact-main{
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    padding-top: 45px;
+    padding-left: 57px;
+     padding-right: 38px; 
+    padding-bottom: 73px;
+
+}
+.green-images{
+    background-image: url(../images/green.png);
+    background-repeat: no-repeat;
+    width: 1097px;
+    height: 854px;
+    background-size: contain;
+    
+    top: 0px;
+    
+}
+
+.green-white{
+    background-color: white;
+    width: 52.9%;
+    
+    height: 78%;
+    margin-left: 67px;
+    margin-top: 57px;
+    padding: 0px 38px;
+    float: left;
+
+}
+.green-white h1{
+    font-size: 24px;
+    font-weight: 500;
+    color: #009444;
+    margin-bottom: 39px;
+    margin-top: 43px;
+    font-family: 'Roboto-Medium';
+}
+.green-white input{
+    width: 92%;
+    border: #bdbdbd solid 1px;
+    margin-bottom: 20px;
+    padding: 23px;
+    font-family: 'Roboto-Medium';
+    color: #bdbdbd;
+    font-size: 16px;
+}
+.green-white input::placeholder{
+    color: #bdbdbd;
+    
+    
+}
+.green-white input:focus{
+   
+    
+    color: #bdbdbd ;
+   
+   border-color: (148,148,148);
+    outline: none; /*burada tıklandığında  kenarlıkların tıklnmasını kaldırır.*/
+    
+}
+
+.g-button {
+    text-align: center;
+    width: 165px;
+    float: right;
+    margin-top: 14px;
+    padding: 0 0 0 0;
+
+}
+.green-white .g-button input{
+    padding: 15px 0px 15px 0px;
+    border: #009444 solid 1px;
+    color: #009444;
+    cursor: pointer;
+    width: 170px;
+    margin-top: 3px;
+    font-family: 'Roboto-Medium';
+    background-color: white;
+
+}
+.g-button input:hover{
+    background: #009444;
+    color: white;
+
+   
+}
+.g-img{
+    background-image: url(../images/robot.png);
+    background-repeat: no-repeat;
+    background-repeat: no-repeat;
+    width: 54%;
+    height: 89px;
+    margin: 0px 0px 0px 0px;
+    float: left;
+    margin-top: 10px;
+
+}
+
+.g-sosyalmedia {
+    background-color: white;
+    width: 7.3% ;
+    height: 213px;
+    float: left;
+    margin-top: 58px;
+    margin-left: 8px;
+   
+    padding-bottom: 7px;
+    padding-top: 8px;
+
+}
+.g-sosyalmedia .sosyalmedia li{
+    margin-top: 19.9%;
+}
+
+.g-sosyalmedia .sosyalmedia li  i{  
+      
+    color: white;
+    border-radius: 73%;
+    width: 31px;
+    height: 31px;
+    float: left;
+    font-size: 19px;
+    line-height: 31px;
+    margin-right: 0px;
+    box-shadow: 2px 2px 3px 2px #c3c0c0;
+    margin-left: 23px;
+    margin-top: 0px;
+
+}
+@media only screen and (min-width: 1025px) and (max-width:1278px)  {
+    .logo {
+        float: left;
+        width: 118px;
+        height: 150px;
+       
+    }
+    .navbar {
+        padding-top: 20px;
+        margin-bottom: 20px;
+        height: 130px;
+        clear: both;
+    }
+
+    .content-images img{
+      
+        max-width: 67%;
+    height: auto;
+    margin-left: 27%;
+      
+    }
+
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 0px;
+    }
+    .content-main{
+        width: 100%;
+    }
+  .content-text{font-size: 18px;
+    font-size: 18px;
+    font-family: 'Roboto-Italic';
+    margin-bottom: 23px;
+    line-height: 30px;
+    color: #565656;
+    text-align: justify;
+
+}
+
+.content-text p {
+    font-size: 18px;
+    font-family: 'Roboto-Italic';
+    margin-bottom: 28px;
+    line-height: 30px;
+    color: #565656;
+    text-align: justify;
+}
+ .title h1{  font-weight: 500;
+    font-size: 60px;
+    line-height: 93px;
+    margin-bottom: 0px;
+    color: #565656;
+    font-family: 'Roboto-Medium';
+}
+.gallery-button div{
+    font-family: 'Roboto-Bold';
+    font-size: 24px;
+    color: white;
+    margin: 50px 9px;
+    text-decoration: none;
+
+}
+.gallery-button {
+    
+    background-image: url(../images/galeri.png);
+    float: left;
+    margin-left: 54px;
+    margin-top: 23px;
+    width: 28%;
+    background-size: cover;
+    
+
+}
+
+.top {
+    width: 0px;
+    height: 0px;
+    border-top: 272px solid rgb(244, 244, 244);
+    border-left: 255px solid transparent;
+    border-right: 186px solid transparent;
+    margin-left: 159px;
+    position: absolute;
+
+    
+}
+
+.left{
+    position: absolute;
+    width: 413px;
+    height: 609px;
+    background: rgb(238, 238, 238);
+}
+
+
+.lower {
+    width: 0px;
+    height: 0px;
+    border-left: 236px solid transparent;
+    border-right: 253px solid transparent;
+    border-bottom: 333px solid rgb(244, 244, 244);
+    margin-top: 273px;
+    margin-left: 178px;
+}
+
+.ball {
+    background-image: url(../images/top.png);
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+.content-rightside{
+    
+    float: right;
+    margin-left: 3%;
+    width: calc(97% - (424px + 6%));
+    
+}
+
+.menu li {
+    float: left;
+    margin-right: 111px;
+}
+
+.menu {
+    list-style: none;
+    font-family: 'Roboto-Medium';
+    clear: right;
+    float: right;
+    padding-top: 30px;
+    /* margin-left: 28%; */
+    width: calc(100% - (86px + 6%));
+}
+
+/*personal */
+.teams {
+    right: 6.4%;
+    margin-top: 155px;
+    position: absolute;
+    margin-right: 0px;
+}
+.teams img {
+    margin-left: 38px;
+    filter: drop-shadow(1px 5px 6px #29441f);
+}
+.personal-text {
+    width: 99%;
+    display: inline-block;
+    margin-top: 89px;
+    margin-left: 40px;
+    color: #565656;
+}
+
+/*iletişim*/
+.contact-main {
+    width: 90%;
+    background-color: #fff;
+    display: block;
+    padding-top: 45px;
+    padding-left: 57px;
+    padding-right: 38px;
+    padding-bottom: 44px;
+}
+
+
+    
+}
+
+@media only screen and (min-width: 1279px) and (max-width:1366px) {
+    .logo {
+        float: left;
+        width: 118px;
+        height: 150px;
+       
+    }
+    .navbar {
+        padding-top: 20px;
+        margin-bottom: 20px;
+        height: 130px;
+        clear: both;
+    }
+
+    .content-images img{
+      
+        max-width: 67%;
+    height: auto;
+    margin-left: 27%;
+      
+    }
+
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 0px;
+    }
+    .content-main{
+        width: 100%;
+    }
+  .content-text{font-size: 18px;
+    font-size: 18px;
+    font-family: 'Roboto-Italic';
+    margin-bottom: 23px;
+    line-height: 30px;
+    color: #565656;
+    text-align: justify;
+
+}
+
+.content-text p {
+    font-size: 18px;
+    font-family: 'Roboto-Italic';
+    margin-bottom: 28px;
+    line-height: 30px;
+    color: #565656;
+    text-align: justify;
+}
+ .title h1{  font-weight: 500;
+    font-size: 60px;
+    line-height: 93px;
+    margin-bottom: 0px;
+    color: #565656;
+    font-family: 'Roboto-Medium';
+}
+.gallery-button div{
+    font-family: 'Roboto-Bold';
+    font-size: 24px;
+    color: white;
+    margin: 50px 9px;
+    text-decoration: none;
+
+}
+.gallery-button {
+    
+    background-image: url(../images/galeri.png);
+    float: left;
+    margin-left: 54px;
+    margin-top: 23px;
+    width: 28%;
+    background-size: cover;
+    
+
+}
+.position {
+   
+    height: 723px;
+    width: 100%;
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.lower {
+    width: 0px;
+    height: 0px;
+    border-left: 235px solid transparent;
+    border-right: 250px solid transparent;
+    border-bottom: 372px solid rgb(244, 244, 244);
+    margin-top: 350px;
+    margin-left: 177px;
+}
+.left {
+    position: absolute;
+    width: 410px;
+    height: 723px;
+    background: rgb(238, 238, 238);
+}
+.top {
+    width: 0px;
+    height: 0px;
+    border-top: 352px solid rgb(244, 244, 244);
+    border-left: 258px solid transparent;
+    border-right: 192px solid transparent;
+    margin-left: 154px;
+    position: absolute;
+}
+
+.ball {
+    background-image: url(../images/top.png);
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+.content-rightside{
+    
+    float: right;
+    margin-left: 3%;
+    width: calc(97% - (424px + 6%));
+    
+}
+
+.menu li {
+    float: left;
+    margin-right: 111px;
+}
+
+.menu {
+    list-style: none;
+    font-family: 'Roboto-Medium';
+    clear: right;
+    float: right;
+    padding-top: 30px;
+    /* margin-left: 28%; */
+    width: calc(100% - (86px + 6%));
+}
+/*personal*/
+
+.teams {
+    right: 8.4%;
+    margin-top: 155px;
+    position: absolute;
+    margin-right: 0px;
+}
+.teams img {
+    margin-left: 38px;
+    filter: drop-shadow(1px 5px 6px #29441f);
+}
+/*iletişim*/
+.contact-main {
+    width: 98%;
+    background-color: #fff;
+    display: block;
+    padding-top: 45px;
+    padding-left: 57px;
+    padding-right: 38px;
+    padding-bottom: 73px;
+}
+
+}
+
+@media only screen and (min-width: 1601px) and (max-width:1680px)  {
+ 
+    .logo {
+        float: left;
+        width: 118px;
+        height: 150px;
+       
+    }
+    .navbar {
+        padding-top: 20px;
+        margin-bottom: 20px;
+        height: 177px;
+        clear: both;
+    }
+
+    .content-images img{
+      
+        max-width: 67%;
+    height: auto;
+    margin-left: 27%;
+      
+    }
+
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 0px;
+    }
+    .content-main{
+        width: 100%;
+       
+    }
+  .content-text{font-size: 18px;
+    font-size: 18px;
+    font-family: 'Roboto-Italic';
+    margin-bottom: 23px;
+    line-height: 30px;
+    color: #565656;
+    text-align: justify;
+
+}
+
+.content-text p {
+    font-size: 18px;
+    font-family: 'Roboto-Italic';
+    margin-bottom: 28px;
+    line-height: 30px;
+    color: #565656;
+    text-align: justify;
+}
+ .title h1{  font-weight: 500;
+    font-size: 60px;
+    line-height: 93px;
+    margin-bottom: 0px;
+    color: #565656;
+    font-family: 'Roboto-Medium';
+}
+.gallery-button{
+   
+    background-image: url(../images/galeri.png);
+    float: left;
+    margin-left: 82px; /* bununla galeri kutucuğunu içeriye doğru taşıdık*/
+    margin-top: 29px;
+    width: 38%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /*background-size: cover;
+    clear: both;*/
+       
+}
+.gallery-button div{
+    font-family: 'Roboto-Bold';
+    font-size: 29px;
+    color: white;
+    margin: 71px 16px;
+    text-decoration: none;
+
+}
+
+.left {
+    position: absolute;
+    width: 592px;
+    height: 1004px;
+    background: rgb(238, 238, 238);
+
+}
+
+.top {
+    width: 0px;
+    height: 0px;
+    border-top: 417px solid rgb(244, 244, 244);
+    border-left: 282px solid transparent;
+    border-right: 186px solid transparent;
+    margin-left: 310px;
+    position: absolute;
+}
+
+.lower {
+    width: 0px;
+    height: 0px;
+    border-bottom: 599px solid rgb(244, 244, 244);
+    border-left: 186px solid transparent;
+    border-right: 358px solid transparent;
+    margin-top: 406px;
+    margin-left: 406px;
+}
+.ball {
+    background-image: url(../images/top.png);
+    background-repeat: no-repeat;
+    width: 43%;
+    height: 57%;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+}
+
+.shapes {
+    height: 52%;
+    width: 100%;
+    position: relative;
+}
+
+
+.content-rightside{
+    
+    float: right;
+    margin-left: 3%;
+    width: calc(97% - (424px + 6%));
+    
+}
+
+.menu li {
+    float: left;
+    margin-right: 111px;
+}
+
+.menu {
+    list-style: none;
+    font-family: 'Roboto-Medium';
+    clear: right;
+    float: right;
+    padding-top: 30px;
+    /* margin-left: 28%; */
+    width: calc(100% - (86px + 6%));
+}
+
+/*personal*/
+
+.personal-content {
+    display: table;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 63px;
+}
+.teams {
+    right: 16.4%;
+    margin-top: 155px;
+    position: absolute;
+    margin-right: 0px;
+}
+.teams img {
+    margin-left: 38px;
+    filter: drop-shadow(1px 5px 6px #29441f);
+}
+.contact-main {
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    padding-top: 45px;
+    padding-left: 57px;
+    padding-right: 38px;
+    padding-bottom: 138px;
+}
+.p-footer .footer {
+    font-size: 12px;
+    box-shadow: 13px 0px 18px rgb(0 0 0 / 10%);
+    bottom: 0px;
+    position: relative;
+    min-width: 100%;
+    padding: 15px 0 22px;
+    background-color: #f3f3f3;
+    top: 0px;
+}
+
+
+
+
+}
+
+@media only screen and (min-width: 1551px) and (max-width:1600px)  {
+
+    .logo {
+        float: left;
+        width: 118px;
+        height: 150px;
+       
+    }
+    .navbar {
+        padding-top: 20px;
+        margin-bottom: 20px;
+        height: 130px;
+        clear: both;
+    }
+
+    .content-images img{
+      
+        max-width: 84%;
+    height: auto;
+    margin-left: 3%;
+      
+    }
+
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 68px;
+    }
+    .content-main{
+        width: 100%;
+    }
+  .content-text{font-size: 18px;
+    font-size: 18px;
+    font-family: 'Roboto-Italic';
+    margin-bottom: 23px;
+    line-height: 30px;
+    color: #565656;
+    text-align: justify;
+
+}
+
+.content-text p {
+    font-size: 18px;
+    font-family: 'Roboto-Italic';
+    margin-bottom: 28px;
+    line-height: 30px;
+    color: #565656;
+    text-align: justify;
+}
+ .title h1{  font-weight: 500;
+    font-size: 60px;
+    line-height: 93px;
+    margin-bottom: 0px;
+    color: #565656;
+    font-family: 'Roboto-Medium';
+}
+.gallery-button{
+   
+    background-image: url(../images/galeri.png);
+    float: left;
+    margin-left: 82px; /* bununla galeri kutucuğunu içeriye doğru taşıdık*/
+    margin-top: 67px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /*background-size: cover;
+    clear: both;*/
+       
+}
+.gallery-button div{
+    font-family: 'Roboto-Bold';
+    font-size: 36px;
+    color: white;
+    margin: 83px 16px;
+    text-decoration: none;
+
+}
+
+
+.top {
+    width: 0px;
+    height: 0px;
+    border-top: 424px solid #f4f4f4;
+    border-left: 379px solid transparent;
+    border-right: 280px solid transparent;
+    margin-left: 48px;
+    position: absolute;
+
+
+
+    
+}
+
+.left{
+    position: absolute;
+    width: 429px;
+    height: 856px;
+    background: #eeeeee;
+}
+
+
+.lower{
+    width: 0px;
+    height: 0px;
+    border-left: 280px solid transparent;
+    border-right: 379px solid transparent;
+    border-bottom: 432px solid #f4f4f4;
+    margin-top: 424px;
+    margin-left: 147px;
+
+}
+
+.ball {
+    background-image: url(../images/top.png);
+    background-repeat: no-repeat;
+    width: 36%;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+}
+
+.content-rightside{
+    
+    float: right;
+    margin-left: 3%;
+    width: calc(97% - (424px + 6%));
+    
+}
+
+.menu li {
+    float: left;
+    margin-right: 111px;
+}
+
+.menu {
+    list-style: none;
+    font-family: 'Roboto-Medium';
+    clear: right;
+    float: right;
+    padding-top: 30px;
+    /* margin-left: 28%; */
+    width: calc(100% - (86px + 6%));
+}
+
+/*personal*/
+
+.teams {
+    right: 14.4%;
+    margin-top: 155px;
+    position: absolute;
+    margin-right: 0px;
+}
+.teams img {
+    margin-left: 38px;
+    filter: drop-shadow(1px 5px 6px #29441f);
+}
+
+}
+
+@media only screen and (max-width:1024px)  {
+
+    .container {
+        width: 1024px;
+        margin: 0 auto;
+    }
+    .logo{
+        margin-left: 15px;
+    }
+    .navbar {
+        padding-top: 20px;
+        margin-bottom: 22px;
+        height: 130px;
+        clear: both;
+        width: 1024px;
+    }
+    .right {
+        float: right;
+        width: 800px;
+        margin-right: 15px;
+    }
+    .content-button {
+        margin-right: 15px;
+    }
+    .menu {
+        list-style: none;
+    font-family: 'Roboto-Medium';
+    clear: right;
+    float: right;
+    padding-top: 30px;
+    margin-left: 12%;
+    /* max-width: 100%; */
+    width: calc(100% - (211px + 6%));
+    }    
+
+    .menu li {
+        float: left;
+        margin-right: 70px;
+    }
+    .main{
+    
+        width: 1024px;
+        margin: 0 auto;
+        
+    }
+    .content {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .content-main{
+        width: 1024px;
+    }
+     .content-images{
+         
+         max-width: 31%;
+         height: auto;
+         margin-left: 10%;
+         margin-top: 34px;
+     }
+    
+    
+    
+     .content-rightside{
+        float: right;
+        margin-left: 3%;
+        width: calc(100% - (406px + 6%));
+
+     }
+     .title h1 {
+        font-weight: 500;
+        font-size: 60px;
+        line-height: 93px;
+        margin-bottom: 0px;
+        color: #565656;
+        font-family: 'Roboto-Medium';
+    }
+    .content-text p {
+        font-size: 18px;
+        font-family: 'Roboto-Italic';
+        margin-bottom: 24px;
+        line-height: 30px;
+        color: #565656;
+        text-align: justify;
+        margin-right: 15px;
+    }
+
+    .gallery-button {
+        background-image: url(../images/galeri.png);
+        float: left;
+        margin-left: 17px;
+        margin-top: 46px;
+        width: 41%;
+        background-size: cover;
+    
+    }
+    .gallery-button div {
+        font-family: 'Roboto-Bold';
+        font-size: 24px;
+        color: white;
+        margin: 69px 11px;
+        text-decoration: none;
+    }
+    .detail-button{
+        margin-right: 3px
+    }
+
+    .lower {
+        width: 0px;
+        height: 0px;
+        border-left: 197px solid transparent;
+        border-right: 197px solid transparent;
+        border-bottom: 332px solid #f4f4f4;
+        margin-top: 384px;
+        margin-left: 95px;
+    }
+
+    
+    .top {
+        
+        width: 0px;
+        height: 0px;
+        border-top: 384px solid #f4f4f4;
+        border-left: 197px solid transparent;
+        border-right: 197px solid transparent;
+        margin-left: 95px;
+        position: absolute;
+    }
+    
+       
+       
+    
+    .left{
+        position: absolute;
+    width: 291px;
+    height: 717px;
+    background: #eeeeee;
+    }
+    
+        
+    
+    .ball{
+        
+       
+        background-image: url(../images/top.png);
+        background-repeat: no-repeat;
+        width: 40%;
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+    }
+    .footer{
+        font-size: 12px;
+        box-shadow: 13px 0px 18px rgb(0,0,0,0.10);
+        bottom: 0px;
+        position: absolute;
+        min-width:100%;
+        padding: 18px 0px;
+        background-color: #f3f3f3;  
+       
+       
+    }
+   
+    .footer .main {
+        height: inherit;
+        display: table;
+        width: 99%;
+        font-family: 'Roboto-Medium';
+    }
+
+    /*personal*/
+    .personal-navi ul {
+        float: right;
+        margin-right: 15px;
+    }
+
+    .personel-img img {
+        max-width: 84%;
+        margin-left: 15px;
+    }
+
+    .stadium {
+        background-image: url(../images/Layer.png);
+        float: right;
+        margin-left: 239px;
+        margin-top: 69px;
+        width: 83%;
+        height: 204px;
+        z-index: 0;
+        background-repeat: no-repeat;
+        position: relative;
+        margin-right: 15px;
+    }
+    .teams {
+        right: 2%;
+        margin-top: 155px;
+        position: absolute;
+        margin-right: 0px;
+    }
+    .teams img {
+        margin-left: 24px;
+        filter: drop-shadow(1px 5px 6px #29441f);
+    }
+
+    .personal-text {
+        width: 96%;
+        display: inline-block;
+        margin-top: 89px;
+        margin-left: 40px;
+        color: #565656;
+    }
+
+    /*Galeri*/
+    .g-gallery li {
+        list-style: none;
+        float: left;
+        display: block;
+        width: 23.5%;
+        height: 185px;
+        margin-left: 1.4%;
+        margin-bottom: 0px;
+    }
+    .g-gallery {
+       
+        padding-right: 15px;
+      
+    }
+    /*iletişim*/
+    .contact-main {
+        width: 90%;
+        background-color: #fff;
+        display: block;
+        padding-top: 45px;
+        padding-left: 57px;
+        padding-right: 38px;
+        padding-bottom: 44px;
+    }
+
+    .green-images {
+        background-image: url(../images/green.png);
+        background-repeat: no-repeat;
+        width: 954px;
+        height: 758px;
+        background-size: contain;
+        top: 0px;
+    }
+    .green-white {
+        background-color: white;
+        width: 50.9%;
+        height: 75%;
+        margin-left: 67px;
+        margin-top: 57px;
+        padding: 0px 38px;
+        float: left;
+    }
+    .green-white input {
+        width: 92%;
+        border: #bdbdbd solid 1px;
+        margin-bottom: 16px;
+        padding: 16px;
+        font-family: 'Roboto-Medium';
+        color: #bdbdbd;
+        font-size: 16px;
+    }
+    .g-img {
+        background-image: url(../images/robot.png);
+        background-repeat: no-repeat;
+        background-repeat: no-repeat;
+        width: 48%;
+        height: 89px;
+        margin: 0px 0px 0px 0px;
+        float: left;
+        margin-top: 10px;
+        background-size: contain;
+    }
+    .green-white .g-button input {
+        padding: 13px 0px 13px 0px;
+        border: #009444 solid 1px;
+        color: #009444;
+        cursor: pointer;
+        width: 160px;
+        margin-top: 3px;
+        font-family: 'Roboto-Medium';
+        background-color: white;
+    }
+    .g-sosyalmedia {
+        background-color: white;
+        width: 7.3%;
+        height: 213px;
+        float: left;
+        margin-top: 58px;
+        margin-left: 8px;
+        padding-bottom: 6px;
+        padding-top: 6px;
+    }
+    .g-sosyalmedia .sosyalmedia li i {
+        color: white;
+        border-radius: 73%;
+        width: 31px;
+        height: 31px;
+        float: left;
+        font-size: 19px;
+        line-height: 31px;
+        margin-right: 0px;
+        box-shadow: 2px 2px 3px 2px #c3c0c0;
+        margin-left: 21px;
+        margin-top: 0px;
+    }
+    .g-sosyalmedia .sosyalmedia li {
+        margin-top: 18.9%;
+    }
+}
+/*iphone 5/5s dikey*/ 
+@media only screen and (max-width:359px){
+    
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+    }
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+
+.content-images{
+    float: none;
+    max-width: 92%;
+    margin: 0 auto 0 auto;  
+}
+.content-images img{
+    
+}
+.content-rightside{
+    
+   
+        float: none;
+        width: 100%;
+        margin: 0 auto 0 auto;
+       
+    
+    
+}
+.title h1 {
+    font-size: 42px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+.content-text {
+    margin: 0 auto 0 auto;
+    
+    width: 93%;
+}
+.content-text p{
+    
+    margin: 0 auto 0 auto;
+}
+
+.content-button {
+   
+    margin: 30px auto 0 auto;
+        padding: 0 0 88px 0;
+        width: 58%;
+}
+.content-button .detail-button {
+    margin: 0 auto 0 auto;
+    
+    
+}
+
+
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 0px auto 0 auto;
+    width: 198px;
+    height: 170px;
+    background-size: 243px 165px;
+    float: none;
+    padding: 1px 0px 20px 0px;
+}.footer .main{
+    width: 90%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Regular';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 13px;
+    display: table;
+    position: relative;
+    padding: 15px 0px 15px 0px;
+    
+}
+.owner a{
+    float: none;
+    margin: 0 auto 0 auto;
+   
+    
+}
+
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+/*kişisel*/
+.personal-main {
+    
+    width: 100%;
+}
+.personal-navi ul {
+    float: none;
+    padding: 0 0 0 5px;
+
+}
+.personal-images{
+    margin: 0 auto 0 auto;
+       display: block;
+       width: 96%;
+   }
+   
+   .personal-top-title{
+    top: 5px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0px 20px 0px;
+   }
+   .personel-img {
+    float: none;
+    
+    
+
+     
+   }
+   .personel-img img{
+         
+       max-width: 92%;
+       
+   
+   }
+   .stadium{
+    width: 100%;
+    margin: 332px 0px 0 0px;
+}
+.personal-text{
+    width: 100%;
+    display: inline-block;
+    
+    
+}
+.teams{
+    width: 100%;
+    margin: auto 0 auto 0;
+    top: 36%;
+    right: 0;
+
+
+}
+.teams img{
+    width: 50px;
+    margin: 21px 0 0 21px;
+}
+.personal-content {
+    display: table;
+    width: 100%;
+    padding: 0 0 0 0;
+    
+}
+.personal-title h1 {
+    margin: 0 auto 0 auto;
+    padding: 0 0 0 10px;
+}
+.personal-text {
+    width: 100%;
+    margin: 41px auto 0 auto;
+}
+.personal-content-text {
+    padding: 0;
+    margin: 0 auto 0 auto;
+    width: 92%;
+}
+/*galeri*/
+.personal-main{
+    width: 100%;
+}
+.gallery-photo {
+    width: 100%;
+    background-color: white;
+    display: table;
+    margin: 0 auto 0 auto;
+}
+.g-gallery{
+   
+    width: 100%;
+    margin: 0 auto 0 auto;
+     padding: 0 0 0 0;
+}
+.g-gallery li {
+    width: 90%;
+    padding: 15px 0 0 0;
+    margin: 0 auto 0 auto;
+    float: none;
+    margin-left: none;
+    display: table;
+}
+.g-gallery li img {
+    max-width: 100%;
+    background-size: cover;
+    cursor: pointer;
+    object-fit: cover;
+    width: 100%;
+}
+/*İletişim*/
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 87%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 87%;
+    display: table;
+  
+}
+.g-img{
+    width: 100%;
+    margin: auto 0 auto 0;
+    
+    float: none;
+
+
+}
+.g-button {
+    
+    width: 100%;
+    float: none;
+    margin: auto 0 auto 0;
+
+    
+}
+.green-white .g-button input{
+    width: 72%;
+    margin: 0 auto 10px auto;
+
+}
+
+.g-sosyalmedia {
+    display: none;
+}
+
+
+
+} 
+/* iphone 6/6s dikey*/
+@media only screen and (min-width:370px) and (max-width:399px){
+
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+    }
+    #header a{
+        padding: 9px 11px;
+    }
+   
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+
+.content-images{
+    float: none;
+    max-width: 92%;
+    margin: 0 auto 0 auto;  
+}
+.content-images img{
+    
+}
+.content-rightside{
+    
+   
+        float: none;
+        width: 100%;
+        margin: 0 auto 0 auto;
+       
+    
+    
+}
+.title h1 {
+    font-size: 42px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+.content-text {
+    margin: 0 auto 0 auto;
+    
+    width: 93%;
+}
+.content-text p{
+    
+    margin: 0 auto 0 auto;
+}
+
+.content-button {
+   
+        margin: 30px auto 0 auto;
+        padding: 0 0 88px 0;
+        width: 54%;
+    
+}
+.content-button .detail-button {
+    margin: 0 auto 0 auto;
+    
+    
+}
+
+
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 0px auto 0 auto;
+    width: 198px;
+    height: 170px;
+    background-size: 243px 165px;
+    float: none;
+    padding: 1px 0px 20px 0px;
+}.footer .main{
+    width: 91%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Regular';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: relative;
+    padding: 15px 0px 15px 0px;
+    
+}
+.owner a{
+    float: none;
+    margin: 0 auto 0 auto;
+   
+    
+}
+
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+/*kişisel*/
+.personal-main {
+    
+    width: 100%;
+}
+.personal-navi ul {
+    float: none;
+    padding: 0 0 0 5px;
+
+}
+.personal-images{
+    margin: 0 auto 0 auto;
+       display: block;
+       width: 96%;
+   }
+   
+   .personal-top-title{
+    top: 5px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0px 20px 0px;
+   }
+   .personel-img {
+    float: none;
+   left: 23px;
+    width: 93%;
+    margin: 0 auto 0 auto;
+     
+   }
+   .personel-img img{
+         
+      width: 100%;
+       
+   
+   }
+   .stadium{
+    width: 100%;
+    margin: 332px 0px 0 0px;
+}
+.personal-text{
+    width: 100%;
+    display: inline-block;
+    
+    
+}
+.teams{
+    width: 92%;
+    margin: auto 0 auto 0;
+    top: 39%;
+    right: 0;
+
+
+}
+.teams img{
+    width: 50px;
+    margin: 21px 0 0 21px;
+}
+.personal-content {
+    display: table;
+    width: 100%;
+    padding: 0 0 0 0;
+    
+}
+.personal-title h1 {
+    margin: 0 auto 0 auto;
+    padding: 0 0 0 10px;
+}
+.personal-text {
+    width: 100%;
+    margin: 41px auto 0 auto;
+}
+.personal-content-text {
+    padding: 0;
+    margin: 0 auto 0 auto;
+    width: 92%;
+}
+/*galeri*/
+.gallery-photo {
+    width: 100%;
+    display: table;
+    margin: 0 auto 0 auto;
+    
+}
+.g-gallery{
+   
+    margin: 0 auto 0 auto;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+
+}
+.g-gallery li {
+    
+    width: 43.5%;
+    margin: 0 auto 0 16px;
+    padding: 0px 0 0 0;
+    height: 130px;
+
+}
+.g-gallery li img{
+    width: 100%;
+}
+/*İletişim*/
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 87%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 87%;
+    display: table;
+  
+}
+.g-img{
+    width: 98%;
+    margin: auto 0 auto 0;
+    
+    float: none;
+
+
+}
+.g-button {
+    
+    width: 100%;
+    float: none;
+    margin: auto 0 auto 0;
+
+    
+}
+.green-white .g-button input{
+    width: 72%;
+    margin: 0 auto 10px auto;
+
+}
+
+.g-sosyalmedia {
+    display: none;
+}
+
+
+}
+/* iphone Plus dikey*/
+@media only screen and (min-width:400px) and (max-width:479px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+    }
+    #header a{
+        padding: 9px 12px;
+    }
+   
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+
+.content-images{
+    float: none;
+    max-width: 92%;
+    margin: 0 auto 0 auto;  
+}
+.content-images img{
+    
+}
+.content-rightside{
+    
+   
+        float: none;
+        width: 100%;
+        margin: 0 auto 0 auto;
+       
+    
+    
+}
+.title h1 {
+    font-size: 42px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+.content-text {
+    margin: 0 auto 0 auto;
+    
+    width: 93%;
+}
+.content-text p{
+    
+    margin: 0 auto 0 auto;
+}
+
+.content-button {
+   
+    margin: 30px auto 0 auto;
+        padding: 0 0 88px 0;
+        width: 54%;
+}
+.content-button .detail-button {
+    margin: 0 auto 0 auto;
+    
+    
+}
+
+
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 0px auto 0 auto;
+    width: 198px;
+    height: 170px;
+    background-size: 243px 165px;
+    float: none;
+    padding: 1px 0px 20px 0px;
+}.footer .main{
+    width: 81%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Regular';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: relative;
+    padding: 15px 0px 15px 0px;
+    
+}
+.owner a{
+    float: none;
+    margin: 0 auto 0 auto;
+   
+    
+}
+
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+/*kişisel*/
+.personal-main {
+    
+    width: 100%;
+}
+.personal-navi ul {
+    float: none;
+    padding: 0 0 0 5px;
+
+}
+.personal-images{
+    margin: 0 auto 0 auto;
+       display: block;
+       width: 96%;
+   }
+   
+   .personal-top-title{
+    top: 5px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0px 20px 0px;
+   }
+   .personel-img {
+    float: none;
+   left: 23px;
+    width: 94%;
+    margin: 0 auto 0 auto;
+     
+   }
+   .personel-img img{
+         
+      width: 100%;
+       
+   
+   }
+   .stadium{
+    width: 100%;
+    margin: 375px 0px 0 0px;
+}
+.personal-text{
+    width: 100%;
+    display: inline-block;
+    
+    
+}
+.teams{
+    width: 89%;
+    margin: auto 0 auto 0;
+    top: 42%;
+    right: 0;
+
+
+}
+.teams img{
+    width: 50px;
+    margin: 21px 0 0 21px;
+}
+.personal-content {
+    display: table;
+    width: 100%;
+    padding: 0 0 0 0;
+    
+}
+.personal-title h1 {
+    margin: 0 auto 0 auto;
+    padding: 0 0 0 10px;
+}
+.personal-text {
+    width: 100%;
+    margin: 41px auto 0 auto;
+}
+.personal-content-text {
+    padding: 0;
+    margin: 0 auto 0 auto;
+    width: 92%;
+}
+/*galeri*/
+.gallery-photo {
+    width: 100%;
+    display: table;
+    margin: 0 auto 0 auto;
+    
+}
+.g-gallery{
+   
+    margin: 0 auto 0 auto;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+
+}
+.g-gallery li {
+    
+    width: 43.5%;
+    margin: 0 auto 0 18px;
+    padding: 0px 0 0 0;
+    height: 143px;
+
+}
+.g-gallery li img{
+    width: 100%;
+}
+/*İletişim*/
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 87%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 11px 15px 25px;
+    float: none;
+}
+.green-white input{
+    width: 87%;
+    display: table;
+  
+}
+.g-img{
+    width: 97%;
+    margin: 0 auto 0 auto;
+    
+   
+
+
+}
+.g-button {
+    
+    width: 100%;
+    float: none;
+    margin: 0 auto 0 auto;
+
+    
+}
+.green-white .g-button input{
+    width: 72%;
+    margin: 0 auto 10px auto;
+    position: relative;
+    top: 11px;
+
+}
+
+.g-sosyalmedia {
+    display: none;
+}
+
+}
+/*Samsung S3 dikey*/
+@media only screen and (min-width:360px) and (max-width:369px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+    }
+   
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+
+.content-images{
+    float: none;
+    max-width: 92%;
+    margin: 0 auto 0 auto;  
+}
+.content-images img{
+    
+}
+.content-rightside{
+    
+   
+        float: none;
+        width: 100%;
+        margin: 0 auto 0 auto;
+       
+    
+    
+}
+.title h1 {
+    font-size: 42px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+.content-text {
+    margin: 0 auto 0 auto;
+    
+    width: 93%;
+}
+.content-text p{
+    
+    margin: 0 auto 0 auto;
+}
+
+.content-button {
+   
+    margin: 30px auto 0 auto;
+    padding: 0 0 88px 0;
+    width: 54%;
+}
+.content-button .detail-button {
+    margin: 0 auto 0 auto;
+    
+    
+}
+
+
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 0px auto 0 auto;
+    width: 198px;
+    height: 170px;
+    background-size: 243px 165px;
+    float: none;
+    padding: 1px 0px 20px 0px;
+}.footer .main{
+    width: 88%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Regular';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: relative;
+    padding: 15px 0px 15px 0px;
+    
+}
+.owner a{
+    float: none;
+    margin: 0 auto 0 auto;
+   
+    
+}
+
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+/*kişisel*/
+.personal-main {
+    
+    width: 100%;
+}
+.personal-navi ul {
+    float: none;
+    padding: 0 0 0 5px;
+
+}
+.personal-images{
+    margin: 0 auto 0 auto;
+       display: block;
+       width: 96%;
+   }
+   
+   .personal-top-title{
+    top: 5px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0px 20px 0px;
+   }
+   .personel-img {
+    float: none;
+   left: 0px;
+    width: 93%;
+    margin: 0 auto 0 auto;
+     
+   }
+   .personel-img img{
+         
+      width: 100%;
+      max-width: none;
+       
+   
+   }
+   .stadium{
+    width: 100%;
+    margin: 375px 0px 0 0px;
+}
+.personal-text{
+    width: 100%;
+    display: inline-block;
+    
+    
+}
+.teams{
+    width: 94%;
+    margin: auto 0 auto 0;
+    top: 41%;
+    right: 0;
+
+
+}
+.teams img{
+    width: 50px;
+    margin: 21px 0 0 21px;
+}
+.personal-content {
+    display: table;
+    width: 100%;
+    padding: 0 0 0 0;
+    
+}
+.personal-title h1 {
+    margin: 0 auto 0 auto;
+    padding: 0 0 0 10px;
+}
+.personal-text {
+    width: 100%;
+    margin: 41px auto 0 auto;
+}
+.personal-content-text {
+    padding: 0;
+    margin: 0 auto 0 auto;
+    width: 92%;
+}
+/*galeri*/
+.gallery-photo {
+    width: 100%;
+    display: table;
+    margin: 0 auto 0 auto;
+    
+}
+.g-gallery{
+   
+    margin: 0 auto 0 auto;
+    padding: 0px 0px 0px 0px;
+    width: 92.5%;
+
+}
+.g-gallery li {
+    
+    width: 100%;
+    margin: 0 auto 0 auto;
+    height: 254px;
+
+
+}
+.g-gallery li img{
+    width: 100%;
+}
+/*İletişim*/
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 87%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 87%;
+    display: table;
+  
+}
+.g-img{
+    width: 98%;
+    margin: 0 auto 0 auto;
+
+
+}
+.g-button {
+    
+    width: 100%;
+    float: none;
+    margin: auto 0 auto 0;
+
+    
+}
+.green-white .g-button input{
+    width: 72%;
+    margin: 0 auto 10px auto;
+    height: 55px;
+
+}
+
+.g-sosyalmedia {
+    display: none;
+}
+
+}
+/*tablet dikey*/
+@media only screen and (min-width:760px) and (max-width:810px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+        width: 7%;
+        top: 15px;
+        margin-top: 0;
+    }
+    #header a {
+        padding: 9px 13px;
+    }    
+   
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+.content-rightside{
+    
+   
+        
+    width: 54%;
+    margin: 0 auto 0 auto;
+      
+}
+.content-images{
+    float: left;
+    width: 45%;
+    margin: 10px auto 0 auto;
+}
+.content-images img{
+    width: 323px;
+    margin: 0px 10px 0 10px;
+    max-width: none;
+}
+.title{
+    margin: 0px 0 25px 0px;
+}
+.content-text{
+    margin: 0 auto 0 auto;
+    width: 100%;
+
+}
+.content-button{
+    margin: 25px auto 0 auto;
+    padding: 0 0 68px 0;
+    width: 91%;
+}
+.content-button .detail-button{
+    padding: 25px 51px;
+}
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 69px auto 20px auto;
+    width: 190px;
+    height: 153px;
+    background-size: 210px;
+    float: left;
+
+}
+
+
+.footer .main{
+    width: 93%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Medium';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: fixed;
+    padding: 15px 0px 15px 0px;
+    
+}
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+
+/*kişisel*/
+.personal-content{
+    width: 98%;
+}
+.personal-images {
+    width: 100%;
+    display: inline-block;
+    margin-top: 4px;
+}
+.personel-img img {
+    max-width: none;
+    width: 85%;
+    margin-left: 10px;
+}
+.stadium{
+    margin-right: 0px;
+   
+}
+.teams{
+    right: 2%;
+    margin-top: 155px;
+    position: absolute;
+    margin-right: 0px;
+    
+}
+.teams img {
+    margin-left: 12px;
+    filter: drop-shadow(1px 5px 6px #29441f);
+    width: 47px;
+}
+/*Galeri*/
+.gallery-photo {
+    width: 100%;
+    display: table;
+    margin: 0 auto 0 auto;
+    
+}
+.g-gallery{
+   
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding: 0;
+
+}
+.g-gallery li {
+    
+    width: 29.5%;
+    margin: 0px auto 0 22px;
+    padding: 0px 0 0 0;
+    height: 186px;
+
+
+}
+.g-gallery li img{
+    width: 100%;
+}
+/*İletişim*/
+.g-sosyalmedia{
+    display: none;
+}
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 85%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 95%;
+    display: table;
+  
+}
+.g-img{
+    width: 45%;
+    margin: auto 0 auto 0;
+    float: none;
+    position: absolute;
+
+
+}
+.g-button {
+    
+    width: 30%;
+    margin: 15px auto 0 auto;
+    padding: 5px 0px 47px 14px;
+}
+.green-white .g-button input{
+    margin: 0 auto 0 auto;
+    height: 58px;
+    width: 100%;
+
+}
+
+}
+/*yataylar*/
+/*iphone 4 yatay*/
+@media only screen and (min-width:480px) and (max-width:559px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+        width: 9%;
+    }
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+
+.content-images{
+    float: none;
+    max-width: 60%;
+    margin: 0 auto 0 auto;  
+}
+.content-images img{
+    
+}
+.content-rightside{
+    
+   
+        float: none;
+        width: 100%;
+        margin: 0 auto 0 auto;
+       
+    
+    
+}
+.title h1 {
+    font-size: 42px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+.content-text {
+    margin: 0 auto 0 auto;
+    
+    width: 93%;
+}
+.content-text p{
+    
+    margin: 0 auto 0 auto;
+}
+
+.content-button {
+   
+    margin: auto 0 0 auto;
+    padding: 35px 138px 88px 0;
+}
+.content-button .detail-button {
+    margin: 0 auto 0 auto;
+    
+    
+}
+
+
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 0px auto 0 auto;
+    width: 198px;
+    height: 170px;
+    background-size: 243px 165px;
+    float: none;
+    padding: 1px 0px 20px 0px;
+}
+.footer .main{
+    width: 93%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Medium';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: fixed;
+    padding: 15px 0px 15px 0px;
+    
+}
+
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+/*kişisel*/
+.personal-main {
+    
+    width: 100%;
+}
+.personal-navi ul {
+    float: none;
+    padding: 0 0 0 5px;
+
+}
+.personal-images{
+    margin: 0 auto 0 auto;
+       display: block;
+       width: 96%;
+   }
+   
+   .personal-top-title{
+    top: 8px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0px 20px 0px;
+   }
+   .personel-img {
+    float: none;
+    width: 97%;
+    text-align: center;     
+   }
+   .personel-img img{
+         
+       max-width: 92%;
+       
+   
+   }
+   .stadium{
+    width: 100%;
+    margin: 342px 0px 0 0px;
+}
+.personal-text{
+    width: 100%;
+    display: inline-block;
+    
+    
+}
+.teams{
+    width: 100%;
+    margin: auto 0 auto 0;
+    top: 46%;
+    right: 0;
+
+
+}
+.teams img{
+    width: 32px;
+    margin: 21px 0 0 21px;
+}
+.personal-content {
+    display: table;
+    width: 100%;
+    padding: 0 0 0 0;
+    
+}
+.personal-title h1 {
+    margin: 0 auto 0 auto;
+    padding: 0 0 0 10px;
+}
+.personal-text {
+    width: 100%;
+    margin: 41px auto 0 auto;
+}
+.personal-content-text {
+    padding: 0;
+    margin: 0 auto 0 auto;
+    width: 92%;
+}
+/*galeri*/
+.gallery-photo {
+    width: 100%;
+    background-color: white;
+    display: table;
+    margin: auto 0 auto 0;
+    padding: 0 0 0px 0;
+}
+.g-gallery{
+   
+    margin: 0 auto 0 auto;
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+
+}
+.g-gallery li {
+    
+    padding: 13px 0 0 0;
+    width: 48%;
+    height: 110px;
+}
+/*İletişim*/
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 87%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+    height: 79%;
+}
+.green-white input{
+    width: 87%;
+    display: table;
+  
+}
+.g-img{
+    width: 93%;
+    height: 67px;
+    margin: 9px 0px 0px 0px;
+    float: none;
+
+
+}
+.g-button {
+    
+    width: 46%;
+    float: none;
+    margin: 8px 12px auto 0;
+    position: absolute;
+    top: 72%;
+    padding: 0 3px 0px 102px;
+
+    
+}
+.green-white .g-button input{
+    width: 81%;
+    margin: 0px auto 0px auto;
+
+}
+
+.g-sosyalmedia {
+    display: none;
+}
+
+}
+
+/*iphone 5/5s yatay*/
+@media only screen and (min-width:560px) and (max-width:639px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+        width: 8%;
+    }
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+
+.content-images{
+    float: none;
+    max-width: 50%;
+    margin: 0 auto 0 auto;  
+}
+.content-images img{
+    
+}
+.content-rightside{
+    
+   
+        float: none;
+        width: 100%;
+        margin: 0 auto 0 auto;
+       
+    
+    
+}
+.title h1 {
+    font-size: 42px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 0 auto;
+}
+.content-text {
+    margin: 0 auto 0 auto;
+    
+    width: 93%;
+}
+.content-text p{
+    
+    margin: 0 auto 0 auto;
+}
+
+.content-button {
+   
+    margin: auto 0 0 auto;
+    padding: 35px 60px 88px 0;
+}
+.content-button .detail-button {
+    margin: 0 auto 0 auto;
+    
+    
+}
+
+
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 0px auto 0 auto;
+    width: 198px;
+    height: 170px;
+    background-size: 223px 146px;
+    position: relative;
+    left: 40px;
+    bottom: 34px;
+    
+   
+   
+}.footer .main{
+    width: 93%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Medium';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: fixed;
+    padding: 15px 0px 15px 0px;
+    
+}
+
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+/*kişisel*/
+.personal-main {
+    
+    width: 100%;
+}
+.personal-navi ul {
+    
+    padding: 0 0 0 5px;
+
+}
+.personal-images{
+    width: 100%;
+    display: inline-block;
+    margin-top: 4px;
+
+   }
+   
+   .personal-top-title{
+    top: 5px;
+    margin: 0 auto 0 auto;
+    padding: 10px 0px 0px 0px;
+   }
+   .personel-img {
+    float: none;
+    
+    
+
+     
+   }
+   .personel-img img{
+         
+    max-width: none;
+    width: 79%;
+    margin-left: 10px;
+       
+   
+   }
+   .stadium{
+    margin-right: 0px;
+    height: 204px;
+    bottom: 19px;
+}
+
+.teams{
+    width: 55%;
+    margin: auto 0 auto 0;
+    top: 27%;
+    right: 0;
+
+
+}
+.teams img{
+    width: 48px;
+    margin: 21px 0 0 21px;
+}
+.personal-content {
+    display: table;
+    width: 97%;
+    padding: 0 0 0 0;
+    
+}
+.personal-title h1 {
+    margin: 0 auto 0 auto;
+    padding: 0 0 0 15px;
+}
+
+.personal-text {
+    width: 100%;
+    margin: 41px auto 0 auto;
+}
+.personal-content-text {
+    padding: 0;
+    margin: 0 auto 0 auto;
+    width: 92%;
+}
+/*galeri*/
+.gallery-photo {
+    width: 93%;
+    background-color: white;
+    display: table;
+    margin: auto 0 auto 0;
+    padding: 0 0 0px 0;
+}
+.g-gallery{
+   
+    margin: 0 auto 0 auto;
+    padding: 0px 0px 0px 15px;
+    width: 100%;
+
+}
+.g-gallery li {
+    
+    padding: 23px 0 0 18px;
+    width: 46%;
+    height: 159px;
+    margin: auto 0 0 auto;
+}
+/*İletişim*/
+.g-sosyalmedia{
+    display: none;
+}
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 78%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 93%;
+    display: table;
+  
+}
+.g-img{
+    width: 45%;
+    margin: auto 0 auto 0;
+    float: none;
+    position: absolute;
+
+
+}
+.g-button {
+    
+    width: 30%;
+    margin: 15px auto 0 auto;
+    padding: 5px 28px 47px 14px;
+}
+    
+}
+
+/*iphone 6/6s yatay*/
+@media only screen and (min-width:660px) and (max-width:699px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+        width: 7%;
+        top: 15px;
+        margin-top: 0;
+    }
+    #header a {
+        padding: 9px 12px;
+    }    
+   
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+.content-rightside{
+    
+   
+        
+    width: 54%;
+    margin: 0 auto 0 auto;
+      
+}
+.content-images{
+    float: left;
+    width: 45%;
+    margin: 10px auto 0 auto;
+}
+.content-images img{
+    width: 273px;
+    margin: 0px 10px 0 10px;
+    max-width: none;
+}
+.title{
+    margin: 0px 0 25px 0px;
+}
+.content-text{
+    margin: 0 auto 0 auto;
+    width: 100%;
+
+}
+.content-button .detail-button{
+    
+    margin: 0px auto 0px auto;
+}
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 0px auto 0px auto;
+    width: 190px;
+    height: 199px;
+    background-size: 210px;
+    float: left;
+    right: 41px;
+    
+    position: relative;
+
+}
+
+
+.footer .main{
+    width: 93%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Medium';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: fixed;
+    padding: 15px 0px 15px 0px;
+    
+}
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+
+/*kişisel*/
+.personal-content{
+    width: 97%;
+}
+.personal-top-title{
+    margin: 0 auto 0 auto;
+    padding: 0px 0px 6px 0px;
+}
+.personal-images {
+    width: 100%;
+    display: inline-block;
+    margin-top: 4px;
+}
+.personel-img img {
+    max-width: none;
+    width: 79%;
+    margin-left: 10px;
+}
+.stadium{
+    margin-right: 0px;
+    height: 204px;
+    bottom: 19px;
+   
+}
+.teams{
+    width: 64%;
+    margin: auto 0 auto 0;
+    top: 27%;
+    right: 0;
+
+    
+}
+.teams img {
+    width: 37px;
+    margin: 47px 0 0 10px;
+}
+.personal-text{
+    margin-top: 16px;
+}
+.personal-content-text{
+    margin-right: 29px;
+}
+/*Galeri*/
+.gallery-photo {
+    width: 99%;
+    padding-bottom: 20px;
+}
+.g-gallery{
+   
+    width: 95%;
+    margin: 0 auto 0 auto;
+    padding-left: 20px;
+
+}
+.g-gallery li {
+    
+    width: 30.4%;
+    margin: 0 auto 0 14px;
+    padding: 15px 0 0 0;
+    height: 133px;
+}
+/*İletişim*/
+.g-sosyalmedia{
+    display: none;
+}
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 80%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 94%;
+    display: table;
+  
+}
+.g-img{
+    width: 45%;
+    margin: auto 0 auto 0;
+    float: none;
+    position: absolute;
+
+
+}
+.g-button {
+    
+    width: 30%;
+    margin: 15px auto 0 auto;
+    padding: 5px 0px 47px 14px;
+}
+}
+
+/*iphone Plus yatay*/
+@media only screen and (min-width:700px) and (max-width:759px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+        width: 7%;
+        top: 15px;
+        margin-top: 0;
+    }
+    #header a {
+        padding: 9px 13px;
+    }    
+   
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+.content-rightside{
+    
+   
+        
+    width: 54%;
+    margin: 0 auto 0 auto;
+      
+}
+.content-images{
+    float: left;
+    width: 45%;
+    margin: 10px auto 0 auto;
+}
+.content-images img{
+    width: 323px;
+    margin: 0px 10px 0 10px;
+    max-width: none;
+}
+.title{
+    margin: 0px 0 25px 0px;
+}
+.content-text{
+    margin: 0 auto 0 auto;
+    width: 100%;
+
+}
+.content-button .detail-button{
+    padding: 15px 51px;
+}
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 38px auto 20px auto;
+    width: 190px;
+    height: 185px;
+    background-size: 210px;
+    float: left;
+
+}
+
+
+.footer .main{
+    width: 93%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Medium';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: fixed;
+    padding: 15px 0px 15px 0px;
+    
+}
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+
+/*kişisel*/
+.personal-content{
+    width: 98%;
+}
+.personal-images {
+    width: 100%;
+    display: inline-block;
+    margin-top: 4px;
+}
+.personel-img img {
+    max-width: none;
+    width: 85%;
+    margin-left: 10px;
+}
+.stadium{
+    margin-right: 0px;
+   
+}
+.teams{
+    right: 2%;
+    margin-top: 155px;
+    position: absolute;
+    margin-right: 0px;
+    
+}
+.teams img {
+    margin-left: 12px;
+    filter: drop-shadow(1px 5px 6px #29441f);
+    width: 44px;
+}
+.personal-text{
+    margin-top: 45px;
+}
+.personal-content-text{
+    margin-right: 30px;
+}
+/*Galeri*/
+.gallery-photo {
+    width: 94%;
+    padding-bottom: 20px;
+}
+.g-gallery{
+   
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding-left: 13px;
+
+}
+.g-gallery li {
+    
+    width: 30.4%;
+    margin: 0 auto 0 20px;
+    padding: 15px 0 0 0;
+    height: 152px;
+}
+/*İletişim*/
+.g-sosyalmedia{
+    display: none;
+}
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 81%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 95%;
+    display: table;
+  
+}
+.g-img{
+    width: 45%;
+    margin: auto 0 auto 0;
+    float: none;
+    position: absolute;
+
+
+}
+.g-button {
+    
+    width: 30%;
+    margin: 15px auto 0 auto;
+    padding: 5px 0px 47px 14px;
+}
+}
+
+/*iphone x yatay*/
+@media only screen and (min-width:811px) and (max-width:999px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+        width: 7%;
+        top: 15px;
+        margin-top: 0;
+    }
+    #header a {
+        padding: 9px 13px;
+    }    
+   
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+.content-rightside{
+    
+   
+        
+    width: 54%;
+    margin: 0 auto 0 auto;
+      
+}
+.content-images{
+    float: left;
+    width: 45%;
+    margin: 10px auto 0 auto;
+}
+.content-images img{
+    width: 323px;
+    margin: 0px 10px 0 10px;
+    max-width: none;
+}
+.title{
+    margin: 0px 0 25px 0px;
+}
+.content-text{
+    margin: 0 auto 0 auto;
+    width: 100%;
+
+}
+.content-button .detail-button{
+    padding: 25px 51px;
+}
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 67px auto 32px auto;
+    width: 190px;
+    height: 200px;
+    background-size: 220px;
+    float: left;
+
+}
+
+
+.footer .main{
+    width: 93%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Medium';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: fixed;
+    padding: 15px 0px 15px 0px;
+    
+}
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+
+/*kişisel*/
+.personal-content{
+    width: 98%;
+}
+.personal-images {
+    width: 100%;
+    display: inline-block;
+    margin-top: 4px;
+}
+.personel-img img {
+    max-width: none;
+    width: 85%;
+    margin-left: 10px;
+}
+.stadium{
+    margin-right: 0px;
+   
+}
+.teams{
+    right: 2%;
+    margin-top: 155px;
+    position: absolute;
+    margin-right: 0px;
+    
+}
+.teams img {
+    margin-left: 12px;
+    filter: drop-shadow(1px 5px 6px #29441f);
+    width: 47px;
+}
+/*Galeri*/
+.gallery-photo {
+    width: 100%;
+    padding-bottom: 20px;
+}
+.g-gallery{
+   
+    width: 95%;
+    margin: 0 auto 0 auto;
+    padding-left: 20px;
+
+}
+.g-gallery li {
+    
+    width: 30.4%;
+    margin: 0 auto 0 15px;
+    padding: 15px 0 0 0;
+    height: 159px;
+}
+/*İletişim*/
+.g-sosyalmedia{
+    display: none;
+}
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 89%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 95%;
+    display: table;
+  
+}
+.g-img{
+    width: 45%;
+    margin: auto 0 auto 0;
+    float: none;
+    position: absolute;
+
+
+}
+.g-button {
+    
+    width: 30%;
+    margin: 15px auto 0 auto;
+    padding: 5px 0px 47px 14px;
+}
+}
+
+/*Samsung S3 yatay*/
+@media only screen and (min-width:640px) and (max-width:659px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+        width: 7%;
+        top: 15px;
+        margin-top: 0;
+    }
+    #header a {
+        padding: 9px 11px;
+    }    
+   
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+.content-rightside{
+    
+   
+        
+    width: 54%;
+    margin: 0 auto 0 auto;
+      
+}
+.content-images{
+    float: left;
+    width: 45%;
+    margin: 10px auto 0 auto;
+}
+.content-images img{
+    width: 271px;
+    margin: 0px 10px 0 10px;
+    max-width: none;
+}
+.title{
+    margin: 0px 0 25px 0px;
+}
+.content-text{
+    margin: 0 auto 0 auto;
+    width: 93%;
+
+}
+.content-button .detail-button{
+    padding: 20px 29px;
+}
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 46px auto 35px auto;
+    width: 190px;
+    height: 189px;
+    background-size: 213px;
+    float: left;
+
+}
+
+
+.footer .main{
+    width: 93%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Medium';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: fixed;
+    padding: 15px 0px 15px 0px;
+    
+}
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+
+/*kişisel*/
+.personal-top-title{
+    margin: auto 0 0 auto;
+    top: 11px;
+}
+.personal-content{
+    width: 97%;
+}
+.personal-images {
+    width: 100%;
+    display: inline-block;
+    margin-top: 4px;
+}
+.personel-img img {
+    max-width: none;
+    width: 85%;
+    margin-left: 10px;
+}
+.stadium{
+    margin-right: 0px;
+   
+}
+.teams{
+    width: 55%;
+    margin: auto 0 auto 0;
+    top: 30%;
+    right: 0;
+
+
+}
+.teams img{
+    width: 52px;
+    margin: 21px 0 0 21px;
+}
+.personal-content-text{
+    margin: auto 17px 0 auto;
+}
+.personal-text{
+    margin: 18px auto 0px 16px;
+}
+/*Galeri*/
+.gallery-photo {
+    width: 94%;
+    background-color: white;
+    display: table;
+    margin: auto 0 auto 0;
+    padding: 0 0 0px 0;
+}
+.g-gallery{
+   
+    margin: 0 auto 0 auto;
+    padding: 0px 0px 0px 36px;
+    width: 100%;
+
+}
+.g-gallery li {
+    
+    padding: 23px 0 0 0;
+    width: 49%;
+    height: 183px;
+    margin: auto 0 0 auto;
+}
+/*İletişim*/
+.g-sosyalmedia{
+    display: none;
+}
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 78%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 93%;
+    display: table;
+  
+}
+.g-img{
+    width: 45%;
+    margin: auto 0 auto 0;
+    float: none;
+    position: absolute;
+
+
+}
+.g-button {
+    
+    width: 30%;
+    margin: 15px auto 0 auto;
+    padding: 5px 14px 47px 14px;
+}
+}
+
+/*tablet yatay*/
+@media only screen and (min-width:1000px) and (max-width:1024px){
+    .mm-menu a {
+        text-decoration: none;
+        color: #565757;
+        font-family: 'Roboto-Medium';
+        font-size: 16px;
+       
+    }
+    .mm-menu li i {
+        margin-right: 10px;
+    }
+    
+    #header {
+        display: block;
+        width: 5%;
+        top: 15px;
+        margin-top: 0;
+    }
+    #header a {
+        padding: 9px 13px;
+    }    
+   
+    .position{
+        display: none;
+    }
+    .right{
+        display: none;
+    }
+    .container
+{
+    width: 100%;
+    
+    
+}
+    .navbar {
+        padding-top: 0;
+        width: 100%;
+        margin: auto 0 0 auto;
+        height: 100px;
+    }
+    .logo
+{
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 135px;
+   
+    
+}
+.logo img {
+    width: 130px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    display: block;
+}
+.content-main{
+    width: 100%;
+    
+}
+.content-rightside{
+    
+   
+        
+    width: 54%;
+    margin: 0 auto 0 auto;
+      
+}
+.content-images{
+    float: left;
+    width: 45%;
+    margin: 10px auto 0 auto;
+}
+.content-images img{
+    width: 323px;
+    margin: 0px 10px 0 10px;
+    max-width: none;
+}
+.title{
+    margin: 0px 0 25px 0px;
+}
+.content-text{
+    margin: 0 auto 0 auto;
+    width: 100%;
+
+}
+.content-button .detail-button{
+    padding: 25px 51px;
+}
+.gallery-button {
+    background-image: url(../images/galeri.png);
+    margin: 76px auto 20px auto;
+    width: 190px;
+    height: 153px;
+    background-size: 210px;
+    float: left;
+
+}
+
+
+.footer .main{
+    width: 93%;
+    margin: 0 auto 0 auto;
+    font-family: 'Roboto-Medium';
+
+}
+
+.footer {
+    margin: 0 auto 0 auto;
+    font-size: 14px;
+    display: table;
+    position: fixed;
+    padding: 15px 0px 15px 0px;
+    
+}
+.mm-navbar__title>span {
+    color: #009444;
+    font-family: 'Roboto-Medium';
+    margin: auto 0 auto 0;
+    font-size: 16px;
+}
+.mm-navbar a {
+    font-family: 'FontAwesome';
+}
+.fa-instagram {
+   background: none;
+}
+.fa-facebook-f{
+    background: none;
+}
+.fa-twitter{
+    background: none;
+}
+.fa-whatsapp{
+    background: none;
+}
+
+/*kişisel*/
+.personal-content{
+    width: 98%;
+}
+.personal-images {
+    width: 100%;
+    display: inline-block;
+    margin-top: 4px;
+}
+.personel-img img {
+    max-width: none;
+    width: 85%;
+    margin-left: 10px;
+}
+.stadium{
+    margin-right: 0px;
+   
+}
+.teams{
+    right: 2%;
+    margin-top: 155px;
+    position: absolute;
+    margin-right: 0px;
+    
+}
+.teams img {
+    margin-left: 12px;
+    filter: drop-shadow(1px 5px 6px #29441f);
+    width: 47px;
+}
+/*Galeri*/
+.gallery-photo {
+    width: 93%;
+    padding-bottom: 20px;
+}
+.g-gallery{
+   
+    width: 100%;
+    margin: 0 auto 0 auto;
+    padding-left: 54px;
+
+}
+.g-gallery li {
+    
+    width: 30.4%;
+    margin: 0 auto 0 14px;
+    padding: 15px 0 0 0;
+    height: 200px;
+}
+/*İletişim*/
+.g-sosyalmedia{
+    display: none;
+}
+.contact-main{
+    margin: 0 auto 0 auto;
+    padding: 65px 0 0 0;
+    width: 97%;
+    height: 780px;
+}
+.green-images{
+    width: 100%;
+    display: table;
+    background-size: cover;
+    height: 752px;
+    margin: 0 auto 0 auto;
+}
+.green-white {
+    width: 81%;
+    margin: 20px auto 0 auto;
+    right: inherit;
+    display: table;
+    padding: 0px 15px 15px 15px;
+    float: none;
+}
+.green-white input{
+    width: 95%;
+    display: table;
+  
+}
+.g-img{
+    width: 45%;
+    margin: auto 0 auto 0;
+    float: none;
+    position: absolute;
+
+
+}
+.g-button {
+    
+    width: 30%;
+    margin: 15px auto 0 auto;
+    padding: 5px 0px 47px 14px;
+}
+.green-white .g-button input{
+    padding: 20px 40px;
+    width: 92%;
+    margin: 0 auto 0 auto;
+    display: table;
+}
+}
+
+
+
+
+
+
+
+
+
+
+ 
+   
+
+
+
+    
+
+
